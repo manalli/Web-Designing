@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 12 Extra 2</title>
+	<style type="text/css">
+		#rect2{
+			background-color: yellow;
+			height: 100px;
+			width: 300px;
+			margin-left: 100px;
+		}
+		#circle{
+			position: absolute;
+			top:20px;
+			left:220px;
+			background-color: red;
+			height:70px;
+			width: 70px;
+			border-radius: 50%;
+			margin: 0 auto;
+		}
+		#circle:hover{
+			animation-name: movement;
+			animation-duration: 15s;
+		}
+		#circle:active{
+			animation-name: move, movement;
+			animation-duration: 15s;
+			border-radius: 0px;
+		}
+		@keyframes movement{
+			0%{top:20px; left: 220px;}
+			100%{top:800px; left: 220px;}
+		}
+		@keyframes move{
+			0%{top:20px; left: 220px;}
+			50%{top:20px; left: 600px;}
+			100%{top:800px; left: 220px;}
+		}
+		.rect{
+			height: 300px;
+			background-color: black;
+			width: 30px;
+			float: left;
+			margin-right: 50px;
+			margin-top: 200px;
+		}
+		#rect1{
+			margin-left: 200px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="rect2"></div>
+	<div id="circle"></div>
+	<div class="rect" id="rect1"></div>
+	<div class="rect"></div>
+</body>
+</html>
